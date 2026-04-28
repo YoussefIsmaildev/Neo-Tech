@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #F44336, #b71c1c);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* MAIN SECTION */
+.exercises {
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.exercise-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-bottom: 3px solid #F44336;
+}
+
+.exercise-card:hover {
+    transform: translateY(-8px);
+}
+
+/* TITLES */
+.exercise-card h2 {
+    color: #F44336;
+    margin-bottom: 5px;
+}
+
+.exercise-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* VIDEO */
+.exercise-card iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* TEXT */
+.exercise-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* FOOTER CTA */
+.footer-cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-cta a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 15px 35px;
+    background-color: #F44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 300px;
+}
+
+.footer-cta a:hover {
+    background-color: #3d0703;
+    transform: scale(1.05);
+}
+.footer-cta a[href="./index.html"] {
+    background-color: transparent;
+    color: #F44336;
+    border: 2px solid #F44336;
+}
+
+.footer-cta a[href="./index.html"]:hover {
+    color: white;
+    background-color: #3d0703;
+}
+
+@media (max-width: 1024px) {
+    .exercises {
+        grid-template-columns: repeat(2, 1fr); /* تابلت */
+    }
+}
+
+@media (max-width: 768px) {
+    .exercises {
+        grid-template-columns: 1fr; /* موبايل */
+    }
+}
+@media (max-width: 914px) {
+    .footer-cta a{
+        margin-bottom: 10px;
+    }
+    /* .hero {
+        height: 300px;
+        font-size: 17px;
+        
+    } */
+}
